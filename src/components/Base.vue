@@ -2,34 +2,7 @@
   <div class="baseBeverage"></div>
 </template>
 
-<script setup lang="ts">
-import { computed } from "vue";
-type Prop = {
-  name: string;
-};
-type BaseBeverage = {
-  name: string;
-  color: string;
-};
-const Bases: BaseBeverage[] = [
-  {
-    name: "Black Tea",
-    color: "#8B4513",
-  },
-  {
-    name: "Green Tea",
-    color: "#C8E6C9",
-  },
-  {
-    name: "Coffee",
-    color: "#6F4E37",
-  },
-];
-
-const props = withDefaults(defineProps<Prop>(), {
-  name: "Black Tea",
-});
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .baseBeverage {

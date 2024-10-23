@@ -4,7 +4,34 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from "vue";
+type Prop = {
+  name: string;
+};
+type Creamer = {
+  name: string;
+  color: string;
+};
+const Creamers: Creamer[] = [
+  {
+    name: "Milk",
+    color: "AliceBlue",
+  },
+  {
+    name: "Cream",
+    color: "#F5F5DC",
+  },
+  {
+    name: "Half & Half",
+    color: "#FFFACD",
+  },
+];
+
+const props = withDefaults(defineProps<Prop>(), {
+  name: "Milk",
+});
+</script>
 <style lang="scss" scoped>
 .froth {
   overflow: visible;
